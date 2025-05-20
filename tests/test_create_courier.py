@@ -11,7 +11,7 @@ class TestCreateCourier:
     data = gen()
 
     @allure.title('Создание курьера')
-    def test_create_courier(self):
+    def test_create_courier(self, courier_data):
         response_body = '{"ok":true}'
         response = requests.post(
             f'{Urls.URL}{Handle.CREATE_COURIER}',
